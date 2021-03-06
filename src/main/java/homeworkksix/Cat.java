@@ -3,10 +3,16 @@ package homeworkksix;
 public class Cat extends Animal{
 
     private String name;
+    private static int countCats;
+
+    protected int getCountCats() {
+        return countCats;
+    }
 
     protected Cat(String name){
         super(name, 200, 0);
         this.name = name;
+        countCats++;
     }
 
     @Override

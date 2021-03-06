@@ -5,11 +5,17 @@ public class Animal {
     private String animalName;
     private int animalRunLimit;
     private int animalSwimLimit;
+    public static int countAnimals;
+
+    protected int getCountAnimals() {
+        return countAnimals;
+    }
 
     protected Animal(String animalName, int animalRunLimit, int animalSwimLimit){
         this.animalName = animalName;
         this.animalRunLimit = animalRunLimit;
         this.animalSwimLimit = animalSwimLimit;
+        countAnimals++;
     }
 
     public void run(int distance){
